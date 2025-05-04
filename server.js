@@ -7,7 +7,7 @@ const { Follow, Like, Comment,Notification } = require('./models/index');
 const app = express();
 const url = process.env.FRONTEND_URL
 app.use(cors({
-    origin: url, 
+    origin: true, 
     credentials: true
 }));
 app.use(express.json());
@@ -101,6 +101,8 @@ app.post('/api/comment', async (req, res) => {
 
   app.get('/api/notifications/:userId', async (req, res) => {
     try {
+        console.log("url",url);
+        
         const notifications = await Notification.find({ userId: req.params.userId })
           .sort({ createdAt: -1 });
         res.json(notifications);
