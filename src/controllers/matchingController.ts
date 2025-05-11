@@ -40,9 +40,9 @@ export const findJobMatches = async (req: Request, res: Response) => {
       .sort((a, b) => b.score - a.score)
       .slice(0, 10);
 
-    res.json(sortedMatches);
+    return res.json(sortedMatches);
   } catch (error) {
-    res.status(500).json({ error: 'Failed to find matches', details: error });
+    return res.status(500).json({ error: 'Failed to find matches', details: error });
   }
 };
 
@@ -96,8 +96,8 @@ export const findCandidateMatches = async (req: Request, res: Response) => {
       .sort((a, b) => b.matchPercentage - a.matchPercentage)
       .slice(0, 10);
 
-    res.json(sortedMatches);
+    return res.json(sortedMatches);
   } catch (error) {
-    res.status(500).json({ error: 'Failed to find matches', details: error });
+    return res.status(500).json({ error: 'Failed to find matches', details: error });
   }
 }; 

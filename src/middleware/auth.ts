@@ -23,7 +23,8 @@ export const authenticate = (req: Request, res: Response, next: NextFunction) =>
     const decoded = jwt.verify(token, config.jwtSecret) as { id: string; role: string };
     req.user = decoded;
     next();
+    return;
   } catch (error) {
-    res.status(401).json({ error: 'Invalid token' });
+    return res.status(401).json({ error: 'Invalid token' });
   }
 }; 

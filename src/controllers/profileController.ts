@@ -1,9 +1,5 @@
 // controllers/candidateController.ts
 import { Request, Response } from 'express';
-import fs from 'fs';
-import pdfParse from 'pdf-parse';
-import mammoth from 'mammoth';
-import path from 'path';
 import CandidateProfile from "../models/Profile";
 import { generateEmbedding } from '../helper/embeded';
 import User from "../models/User";
@@ -40,10 +36,10 @@ export const createProfile = async (req: Request, res: Response) => {
       resumeEmbedding
     });
 
-    res.status(201).json(profile);
+    return res.status(201).json(profile);
   } catch (error) {
     console.error('Profile creation error:', error);
-    res.status(500).json({ error: 'Failed to create profile', details: error });
+    return res.status(500).json({ error: 'Failed to create profile', details: error });
   }
 };
 
@@ -70,10 +66,10 @@ export const updateProfile = async (req: Request, res: Response) => {
       return res.status(404).json({ error: 'Profile not found' });
     }
 
-    res.json(profile);
+    return res.json(profile);
   } catch (error) {
     console.error('Profile update error:', error);
-    res.status(500).json({ error: 'Failed to update profile', details: error });
+    return res.status(500).json({ error: 'Failed to update profile', details: error });
   }
 };
 
@@ -86,9 +82,9 @@ export const getProfile = async (req: Request, res: Response) => {
       return res.status(404).json({ error: 'Profile not found' });
     }
 
-    res.json(profile);
+    return res.json(profile);
   } catch (error) {
-    res.status(500).json({ error: 'Failed to fetch profile', details: error });
+    return res.status(500).json({ error: 'Failed to fetch profile', details: error });
   }
 };
 
@@ -101,9 +97,9 @@ export const deleteProfile = async (req: Request, res: Response) => {
       return res.status(404).json({ error: 'Profile not found' });
     }
 
-    res.json({ message: 'Profile deleted successfully' });
+    return res.json({ message: 'Profile deleted successfully' });
   } catch (error) {
-    res.status(500).json({ error: 'Failed to delete profile', details: error });
+    return res.status(500).json({ error: 'Failed to delete profile', details: error });
   }
 };
 
@@ -119,8 +115,8 @@ export const getCandidateProfile = async (req: Request, res: Response) => {
       return res.status(404).json({ error: 'Profile not found' });
     }
 
-    res.json(profile);
+    return res.json(profile);
   } catch (error) {
-    res.status(500).json({ error: 'Failed to fetch profile', details: error });
+    return res.status(500).json({ error: 'Failed to fetch profile', details: error });
   }
 };

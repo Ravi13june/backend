@@ -62,7 +62,7 @@ export const register = async (req: Request, res: Response) => {
       { expiresIn: '1d' }
     );
 
-    res.status(201).json({ token, user: user[0] });
+    return res.status(201).json({ token, user: user[0] });
   } catch (err: any) {
     await session.abortTransaction();
     console.error('Registration error:', err);
@@ -74,7 +74,7 @@ export const register = async (req: Request, res: Response) => {
       });
     }
 
-    res.status(500).json({ 
+    return res.status(500).json({ 
       error: 'Registration failed', 
       details: err.message || err 
     });
@@ -98,8 +98,8 @@ export const login = async (req: Request, res: Response) => {
       { expiresIn: '1d' }
     );
 
-    res.json({ token, user });
+    return res.json({ token, user });
   } catch (err) {
-    res.status(500).json({ error: 'Login failed', details: err });
+    return res.status(500).json({ error: 'Login failed', details: err });
   }
 };

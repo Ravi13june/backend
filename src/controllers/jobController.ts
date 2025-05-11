@@ -72,13 +72,13 @@ export const createJob = async (req: Request, res: Response) => {
       status: 'active'
     });
 
-    res.status(201).json(job);
+    return res.status(201).json(job);
   } catch (error: any) {
     console.error('Error creating job:', error);
     if (error.name === 'ValidationError') {
       return res.status(400).json({ error: 'Failed to create job', details: error });
     }
-    res.status(500).json({ error: 'Failed to create job', details: error });
+    return res.status(500).json({ error: 'Failed to create job', details: error });
   }
 };
 
@@ -109,9 +109,9 @@ export const updateJob = async (req: Request, res: Response) => {
       return res.status(404).json({ error: 'Job not found' });
     }
 
-    res.json(job);
+    return res.json(job);
   } catch (error) {
-    res.status(500).json({ error: 'Failed to update job', details: error });
+    return res.status(500).json({ error: 'Failed to update job', details: error });
   }
 };
 
@@ -124,9 +124,9 @@ export const getJob = async (req: Request, res: Response) => {
       return res.status(404).json({ error: 'Job not found' });
     }
 
-    res.json(job);
+    return res.json(job);
   } catch (error) {
-    res.status(500).json({ error: 'Failed to fetch job', details: error });
+    return res.status(500).json({ error: 'Failed to fetch job', details: error });
   }
 };
 
@@ -139,9 +139,9 @@ export const deleteJob = async (req: Request, res: Response) => {
       return res.status(404).json({ error: 'Job not found' });
     }
 
-    res.json({ message: 'Job deleted successfully' });
+    return res.json({ message: 'Job deleted successfully' });
   } catch (error) {
-    res.status(500).json({ error: 'Failed to delete job', details: error });
+    return res.status(500).json({ error: 'Failed to delete job', details: error });
   }
 };
 
@@ -155,11 +155,11 @@ export const getEmployerJobs = async (req: Request, res: Response) => {
   }
 };
 
-export const getAllJobs = async (req: Request, res: Response) => {
+export const getAllJobs = async (_req: Request, res: Response) => {
   try {
     const jobs = await Job.find({ status: 'active' });
-    res.json(jobs);
+    return res.json(jobs);
   } catch (error) {
-    res.status(500).json({ error: 'Failed to fetch jobs', details: error });
+    return res.status(500).json({ error: 'Failed to fetch jobs', details: error });
   }
 };

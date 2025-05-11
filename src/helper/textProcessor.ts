@@ -36,11 +36,11 @@ export const calculateSimilarity = (text1: string, text2: string): number => {
   const vector1: number[] = [];
   const vector2: number[] = [];
   
-  tfidf.tfidfs(tokens1, (i, measure) => {
+  tfidf.tfidfs(tokens1, (_i, measure) => {
     vector1.push(measure);
   });
   
-  tfidf.tfidfs(tokens2, (i, measure) => {
+  tfidf.tfidfs(tokens2, (_i, measure) => {
     vector2.push(measure);
   });
   
@@ -53,7 +53,7 @@ export const extractKeywords = (text: string): string[] => {
   // Calculate TF-IDF scores
   tfidf.addDocument(tokens);
   const scores: number[] = [];
-  tfidf.tfidfs(tokens, (i, measure) => {
+  tfidf.tfidfs(tokens, (_i, measure) => {
     scores.push(measure);
   });
   
