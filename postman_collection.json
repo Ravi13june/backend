@@ -1,0 +1,359 @@
+{
+    "info": {
+      "name": "Insyd Notifications API",
+      "description": "API collection for the Insyd Notifications application",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+      {
+        "name": "Authentication",
+        "item": [
+          {
+            "name": "Register",
+            "request": {
+              "method": "POST",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "url": {
+                "raw": "{{base_url}}/auth/register",
+                "host": ["{{base_url}}"],
+                "path": ["auth", "register"]
+              },
+              "body": {
+                "mode": "raw",
+                "raw": "{\n    \"fullName\": \"John Doe\",\n    \"email\": \"john@example.com\",\n    \"password\": \"password123\",\n    \"role\": \"candidate\"\n}"
+              }
+            }
+          },
+          {
+            "name": "Login",
+            "request": {
+              "method": "POST",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "url": {
+                "raw": "{{base_url}}/auth/login",
+                "host": ["{{base_url}}"],
+                "path": ["auth", "login"]
+              },
+              "body": {
+                "mode": "raw",
+                "raw": "{\n    \"email\": \"john@example.com\",\n    \"password\": \"password123\"\n}"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "name": "Profiles",
+        "item": [
+          {
+            "name": "Create Profile",
+            "request": {
+              "method": "POST",
+              "header": [
+                {
+                  "key": "Authorization",
+                  "value": "Bearer {{token}}"
+                }
+              ],
+              "url": {
+                "raw": "{{base_url}}/profiles/candidate",
+                "host": ["{{base_url}}"],
+                "path": ["profiles", "candidate"]
+              },
+              "body": {
+                "mode": "formdata",
+                "formdata": [
+                  {
+                    "key": "title",
+                    "value": "Senior Software Engineer",
+                    "type": "text"
+                  },
+                  {
+                    "key": "bio",
+                    "value": "Experienced developer with expertise in full-stack development",
+                    "type": "text"
+                  },
+                  {
+                    "key": "location",
+                    "value": "San Francisco, CA",
+                    "type": "text"
+                  },
+                  {
+                    "key": "skills",
+                    "value": "[\"JavaScript\", \"React\", \"Node.js\"]",
+                    "type": "text"
+                  },
+                  {
+                    "key": "experience",
+                    "value": "[{\"title\": \"Senior Developer\", \"company\": \"Tech Corp\", \"startDate\": \"2020-01-01\", \"description\": \"Led development...\"}]",
+                    "type": "text"
+                  },
+                  {
+                    "key": "education",
+                    "value": "[{\"institution\": \"University\", \"degree\": \"BS\", \"field\": \"Computer Science\", \"startDate\": \"2016-09-01\"}]",
+                    "type": "text"
+                  },
+                  {
+                    "key": "resume",
+                    "type": "file",
+                    "src": "/path/to/resume.pdf"
+                  }
+                ]
+              },
+              "description": "Create a new candidate profile. The fullName will be automatically taken from the authenticated user's details."
+            }
+          },
+          {
+            "name": "Get Profile",
+            "request": {
+              "method": "GET",
+              "header": [
+                {
+                  "key": "Authorization",
+                  "value": "Bearer {{token}}"
+                }
+              ],
+              "url": {
+                "raw": "{{base_url}}/profiles/candidate",
+                "host": ["{{base_url}}"],
+                "path": ["profiles", "candidate"]
+              }
+            }
+          },
+          {
+            "name": "Update Profile",
+            "request": {
+              "method": "PUT",
+              "header": [
+                {
+                  "key": "Authorization",
+                  "value": "Bearer {{token}}"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "url": {
+                "raw": "{{base_url}}/profiles/candidate",
+                "host": ["{{base_url}}"],
+                "path": ["profiles", "candidate"]
+              },
+              "body": {
+                "mode": "raw",
+                "raw": "{\n    \"title\": \"Updated Title\",\n    \"bio\": \"Updated bio\",\n    \"location\": \"New Location\"\n}"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "name": "Jobs",
+        "item": [
+          {
+            "name": "Create Job",
+            "request": {
+              "method": "POST",
+              "header": [
+                {
+                  "key": "Authorization",
+                  "value": "Bearer {{token}}"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "url": {
+                "raw": "{{base_url}}/jobs",
+                "host": ["{{base_url}}"],
+                "path": ["jobs"]
+              },
+              "body": {
+                "mode": "raw",
+                "raw": "{\n    \"title\": \"Senior Frontend Developer\",\n    \"description\": \"We are looking for an experienced frontend developer...\",\n    \"location\": \"San Francisco, CA\",\n    \"requirements\": [\"React\", \"TypeScript\", \"5+ years experience\"],\n    \"salaryText\": \"120000-180000 USD\"\n}"
+              },
+              "description": "Create a new job posting. The salaryText field accepts various formats:\n- \"120000-180000 USD\"\n- \"$120000-$180000\"\n- \"120000 - 180000\"\n- \"120000\" (single value will be used for both min and max)\nThe currency is optional and defaults to USD if not specified."
+            }
+          },
+          {
+            "name": "Get All Jobs",
+            "request": {
+              "method": "GET",
+              "url": {
+                "raw": "{{base_url}}/jobs",
+                "host": ["{{base_url}}"],
+                "path": ["jobs"]
+              }
+            }
+          },
+          {
+            "name": "Get Job",
+            "request": {
+              "method": "GET",
+              "url": {
+                "raw": "{{base_url}}/jobs/:id",
+                "host": ["{{base_url}}"],
+                "path": ["jobs", ":id"],
+                "variable": [
+                  {
+                    "key": "id",
+                    "value": "job_id_here"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "name": "Update Job",
+            "request": {
+              "method": "PUT",
+              "header": [
+                {
+                  "key": "Authorization",
+                  "value": "Bearer {{token}}"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "url": {
+                "raw": "{{base_url}}/jobs/:id",
+                "host": ["{{base_url}}"],
+                "path": ["jobs", ":id"],
+                "variable": [
+                  {
+                    "key": "id",
+                    "value": "job_id_here"
+                  }
+                ]
+              },
+              "body": {
+                "mode": "raw",
+                "raw": "{\n    \"title\": \"Updated Job Title\",\n    \"description\": \"Updated job description\",\n    \"salaryText\": \"150000-200000 USD\"\n}"
+              },
+              "description": "Update an existing job posting. The salaryText field accepts various formats:\n- \"120000-180000 USD\"\n- \"$120000-$180000\"\n- \"120000 - 180000\"\n- \"120000\" (single value will be used for both min and max)\nThe currency is optional and defaults to USD if not specified."
+            }
+          },
+          {
+            "name": "Delete Job",
+            "request": {
+              "method": "DELETE",
+              "header": [
+                {
+                  "key": "Authorization",
+                  "value": "Bearer {{token}}"
+                }
+              ],
+              "url": {
+                "raw": "{{base_url}}/jobs/:id",
+                "host": ["{{base_url}}"],
+                "path": ["jobs", ":id"],
+                "variable": [
+                  {
+                    "key": "id",
+                    "value": "job_id_here"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "name": "Get Employer Jobs",
+            "request": {
+              "method": "GET",
+              "header": [
+                {
+                  "key": "Authorization",
+                  "value": "Bearer {{token}}"
+                }
+              ],
+              "url": {
+                "raw": "{{base_url}}/jobs/employer/:employerId",
+                "host": ["{{base_url}}"],
+                "path": ["jobs", "employer", ":employerId"],
+                "variable": [
+                  {
+                    "key": "employerId",
+                    "value": "employer_id_here"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "name": "Matching",
+        "item": [
+          {
+            "name": "Find Job Matches",
+            "request": {
+              "method": "GET",
+              "header": [
+                {
+                  "key": "Authorization",
+                  "value": "Bearer {{token}}"
+                }
+              ],
+              "url": {
+                "raw": "{{base_url}}/matching/job/:jobId",
+                "host": ["{{base_url}}"],
+                "path": ["matching", "job", ":jobId"],
+                "variable": [
+                  {
+                    "key": "jobId",
+                    "value": "job_id_here"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "name": "Find Candidate Matches",
+            "request": {
+              "method": "GET",
+              "header": [
+                {
+                  "key": "Authorization",
+                  "value": "Bearer {{token}}"
+                }
+              ],
+              "url": {
+                "raw": "{{base_url}}/matching/candidate/:candidateId",
+                "host": ["{{base_url}}"],
+                "path": ["matching", "candidate", ":candidateId"],
+                "variable": [
+                  {
+                    "key": "candidateId",
+                    "value": "candidate_id_here"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "variable": [
+      {
+        "key": "base_url",
+        "value": "http://localhost:8080/api"
+      },
+      {
+        "key": "token",
+        "value": "your_jwt_token_here"
+      }
+    ]
+  }

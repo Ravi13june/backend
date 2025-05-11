@@ -1,0 +1,87 @@
+{"level":"info","message":"MongoDB connected","timestamp":"2025-05-11T17:14:33.154Z"}
+{"level":"info","message":"Server running at http://localhost:8080","timestamp":"2025-05-11T17:14:33.160Z"}
+{"level":"info","message":"SIGTERM received. Shutting down gracefully...","timestamp":"2025-05-11T17:14:40.085Z"}
+{"level":"info","message":"MongoDB connected","timestamp":"2025-05-11T17:14:41.548Z"}
+{"level":"info","message":"Server running at http://localhost:8080","timestamp":"2025-05-11T17:14:41.558Z"}
+{"level":"info","message":"SIGTERM received. Shutting down gracefully...","timestamp":"2025-05-11T17:15:15.142Z"}
+{"level":"info","message":"MongoDB connected","timestamp":"2025-05-11T17:15:16.449Z"}
+{"level":"info","message":"Server running at http://localhost:8080","timestamp":"2025-05-11T17:15:16.456Z"}
+{"level":"info","message":"SIGTERM received. Shutting down gracefully...","timestamp":"2025-05-11T17:15:20.259Z"}
+{"level":"info","message":"Process terminated","timestamp":"2025-05-11T17:15:20.260Z"}
+{"level":"info","message":"MongoDB connection closed","timestamp":"2025-05-11T17:15:20.268Z"}
+{"level":"info","message":"MongoDB connected","timestamp":"2025-05-11T17:15:21.751Z"}
+{"level":"info","message":"Server running at http://localhost:8080","timestamp":"2025-05-11T17:15:21.758Z"}
+{"level":"info","message":"MongoDB connected","timestamp":"2025-05-11T17:15:36.332Z"}
+{"level":"info","message":"Server running at http://localhost:8080","timestamp":"2025-05-11T17:15:36.339Z"}
+{"level":"info","message":"SIGTERM received. Shutting down gracefully...","timestamp":"2025-05-11T17:19:46.281Z"}
+{"level":"info","message":"Process terminated","timestamp":"2025-05-11T17:19:46.283Z"}
+{"level":"info","message":"MongoDB connection closed","timestamp":"2025-05-11T17:19:46.289Z"}
+{"level":"info","message":"MongoDB connected","timestamp":"2025-05-11T17:19:48.697Z"}
+{"level":"info","message":"Server running at http://localhost:8080","timestamp":"2025-05-11T17:19:48.706Z"}
+{"level":"info","message":"GET /api/jobs","timestamp":"2025-05-11T17:19:51.457Z"}
+{"level":"info","message":"GET /api/jobs","timestamp":"2025-05-11T17:19:55.693Z"}
+{"level":"info","message":"GET /api/matching/candidate/681fef63ea39144899cc2e8d","timestamp":"2025-05-11T17:19:58.162Z"}
+{"level":"info","message":"GET /api/profiles/candidate","timestamp":"2025-05-11T17:19:58.166Z"}
+{"level":"info","message":"GET /api/matching/candidate/681fef63ea39144899cc2e8d","timestamp":"2025-05-11T17:19:59.174Z"}
+{"level":"info","message":"GET /api/jobs","timestamp":"2025-05-11T17:20:03.916Z"}
+{"level":"info","message":"GET /api/jobs","timestamp":"2025-05-11T17:20:06.393Z"}
+{"level":"info","message":"POST /api/auth/login","timestamp":"2025-05-11T17:20:18.498Z"}
+{"level":"info","message":"GET /api/jobs/employer/68205feaea39144899cc2ebb","timestamp":"2025-05-11T17:20:18.655Z"}
+{"level":"info","message":"GET /api/jobs","timestamp":"2025-05-11T17:20:21.381Z"}
+{"level":"info","message":"GET /api/jobs/employer/68205feaea39144899cc2ebb","timestamp":"2025-05-11T17:55:57.937Z"}
+{"level":"info","message":"GET /api/jobs/employer/68205feaea39144899cc2ebb","timestamp":"2025-05-11T17:56:27.417Z"}
+{"level":"info","message":"GET /api/jobs/employer/68205feaea39144899cc2ebb","timestamp":"2025-05-11T17:57:31.060Z"}
+{"level":"info","message":"GET /api/jobs/employer/68205feaea39144899cc2ebb","timestamp":"2025-05-11T17:57:31.443Z"}
+{"level":"info","message":"GET /api/jobs/employer/68205feaea39144899cc2ebb","timestamp":"2025-05-11T17:57:50.826Z"}
+{"level":"info","message":"POST /api/auth/login","timestamp":"2025-05-11T17:58:07.796Z"}
+{"level":"info","message":"GET /api/matching/candidate/681fef63ea39144899cc2e8d","timestamp":"2025-05-11T17:58:08.026Z"}
+{"level":"info","message":"GET /api/profiles/candidate","timestamp":"2025-05-11T17:58:08.027Z"}
+{"level":"info","message":"GET /api/matching/candidate/681fef63ea39144899cc2e8d","timestamp":"2025-05-11T17:58:09.032Z"}
+{"level":"info","message":"GET /api/matching/candidate/681fef63ea39144899cc2e8d","timestamp":"2025-05-11T17:59:04.296Z"}
+{"level":"info","message":"GET /api/profiles/candidate","timestamp":"2025-05-11T17:59:04.300Z"}
+{"level":"info","message":"GET /api/matching/candidate/681fef63ea39144899cc2e8d","timestamp":"2025-05-11T17:59:05.306Z"}
+{"level":"info","message":"GET /api/profiles/candidate","timestamp":"2025-05-11T18:00:39.445Z"}
+{"level":"info","message":"GET /api/matching/candidate/681fef63ea39144899cc2e8d","timestamp":"2025-05-11T18:00:39.448Z"}
+{"level":"info","message":"GET /api/matching/candidate/681fef63ea39144899cc2e8d","timestamp":"2025-05-11T18:00:40.455Z"}
+{"level":"info","message":"GET /api/matching/candidate/681fef63ea39144899cc2e8d","timestamp":"2025-05-11T18:00:51.285Z"}
+{"level":"info","message":"GET /api/profiles/candidate","timestamp":"2025-05-11T18:00:51.287Z"}
+{"level":"info","message":"GET /api/matching/candidate/681fef63ea39144899cc2e8d","timestamp":"2025-05-11T18:00:52.290Z"}
+{"level":"info","message":"GET /api/profiles/candidate","timestamp":"2025-05-11T18:00:58.073Z"}
+{"level":"info","message":"GET /api/matching/candidate/681fef63ea39144899cc2e8d","timestamp":"2025-05-11T18:00:58.078Z"}
+{"level":"info","message":"GET /api/matching/candidate/681fef63ea39144899cc2e8d","timestamp":"2025-05-11T18:00:59.082Z"}
+{"level":"info","message":"GET /api/matching/candidate/681fef63ea39144899cc2e8d","timestamp":"2025-05-11T18:02:13.063Z"}
+{"level":"info","message":"GET /api/profiles/candidate","timestamp":"2025-05-11T18:02:13.064Z"}
+{"level":"info","message":"GET /api/profiles/candidate","timestamp":"2025-05-11T18:02:16.078Z"}
+{"level":"info","message":"GET /api/profiles/candidate","timestamp":"2025-05-11T18:02:26.951Z"}
+{"level":"info","message":"GET /api/matching/candidate/681fef63ea39144899cc2e8d","timestamp":"2025-05-11T18:02:26.954Z"}
+{"level":"info","message":"GET /api/matching/candidate/681fef63ea39144899cc2e8d","timestamp":"2025-05-11T18:03:06.650Z"}
+{"level":"info","message":"GET /api/profiles/candidate","timestamp":"2025-05-11T18:03:06.651Z"}
+{"level":"info","message":"GET /api/matching/candidate/681fef63ea39144899cc2e8d","timestamp":"2025-05-11T18:03:07.656Z"}
+{"level":"info","message":"GET /api/matching/candidate/681fef63ea39144899cc2e8d","timestamp":"2025-05-11T18:03:53.754Z"}
+{"level":"info","message":"GET /api/profiles/candidate","timestamp":"2025-05-11T18:03:53.755Z"}
+{"level":"info","message":"GET /api/matching/candidate/681fef63ea39144899cc2e8d","timestamp":"2025-05-11T18:03:54.762Z"}
+{"level":"info","message":"GET /api/profiles/candidate","timestamp":"2025-05-11T18:04:00.059Z"}
+{"level":"info","message":"GET /api/matching/candidate/681fef63ea39144899cc2e8d","timestamp":"2025-05-11T18:04:00.062Z"}
+{"level":"info","message":"GET /api/profiles/candidate","timestamp":"2025-05-11T18:04:06.059Z"}
+{"level":"info","message":"GET /api/profiles/candidate","timestamp":"2025-05-11T18:04:16.059Z"}
+{"level":"info","message":"GET /api/profiles/candidate","timestamp":"2025-05-11T18:04:22.072Z"}
+{"level":"info","message":"GET /api/matching/candidate/681fef63ea39144899cc2e8d","timestamp":"2025-05-11T18:04:22.148Z"}
+{"level":"info","message":"GET /api/matching/candidate/681fef63ea39144899cc2e8d","timestamp":"2025-05-11T18:05:06.398Z"}
+{"level":"info","message":"GET /api/profiles/candidate","timestamp":"2025-05-11T18:05:06.399Z"}
+{"level":"info","message":"GET /api/matching/candidate/681fef63ea39144899cc2e8d","timestamp":"2025-05-11T18:05:07.404Z"}
+{"level":"info","message":"GET /api/matching/candidate/681fef63ea39144899cc2e8d","timestamp":"2025-05-11T18:05:21.060Z"}
+{"level":"info","message":"GET /api/profiles/candidate","timestamp":"2025-05-11T18:05:21.061Z"}
+{"level":"info","message":"GET /api/matching/candidate/681fef63ea39144899cc2e8d","timestamp":"2025-05-11T18:05:26.669Z"}
+{"level":"info","message":"GET /api/profiles/candidate","timestamp":"2025-05-11T18:05:26.675Z"}
+{"level":"info","message":"GET /api/matching/candidate/681fef63ea39144899cc2e8d","timestamp":"2025-05-11T18:05:50.061Z"}
+{"level":"info","message":"GET /api/profiles/candidate","timestamp":"2025-05-11T18:05:50.062Z"}
+{"level":"info","message":"GET /api/profiles/candidate","timestamp":"2025-05-11T18:05:50.380Z"}
+{"level":"info","message":"GET /api/matching/candidate/681fef63ea39144899cc2e8d","timestamp":"2025-05-11T18:05:51.068Z"}
+{"level":"info","message":"GET /api/profiles/candidate","timestamp":"2025-05-11T18:06:08.378Z"}
+{"level":"info","message":"GET /api/matching/candidate/681fef63ea39144899cc2e8d","timestamp":"2025-05-11T18:06:08.380Z"}
+{"level":"info","message":"GET /api/profiles/candidate","timestamp":"2025-05-11T18:06:08.548Z"}
+{"level":"info","message":"GET /api/matching/candidate/681fef63ea39144899cc2e8d","timestamp":"2025-05-11T18:06:09.386Z"}
+{"level":"info","message":"GET /api/matching/candidate/681fef63ea39144899cc2e8d","timestamp":"2025-05-11T18:06:28.779Z"}
+{"level":"info","message":"GET /api/profiles/candidate","timestamp":"2025-05-11T18:06:28.780Z"}
+{"level":"info","message":"GET /api/matching/candidate/681fef63ea39144899cc2e8d","timestamp":"2025-05-11T18:06:29.785Z"}
+{"level":"info","message":"GET /api/matching/candidate/681fef63ea39144899cc2e8d","timestamp":"2025-05-11T18:06:56.630Z"}
