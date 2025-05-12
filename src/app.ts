@@ -26,7 +26,7 @@ app.use('/api/', limiter);
 
 // Enable CORS
 app.use(cors({
-  origin: process.env.FRONTEND_URL || 'http://localhost:5173',
+  origin: ['http://localhost:5173', 'https://owow-job-portal.netlify.app'],
   credentials: true
 }));
 

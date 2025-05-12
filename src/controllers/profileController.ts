@@ -106,11 +106,13 @@ export const deleteProfile = async (req: Request, res: Response) => {
 export const getCandidateProfile = async (req: Request, res: Response) => {
   try {
     const userId = req.user?.id; // Get from auth middleware
+   
     if (!userId) {
       return res.status(401).json({ error: 'Unauthorized' });
     }
 
     const profile = await CandidateProfile.findOne({ userId });
+    console.log('profile',profile)
     if (!profile) {
       return res.status(404).json({ error: 'Profile not found' });
     }
