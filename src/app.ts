@@ -15,7 +15,11 @@ const app = express();
 // Security middleware
 app.use(helmet());
 app.use(mongoSanitize());
-
+// Enable CORS
+app.use(cors({
+    origin:"*", //['http://localhost:5173', 'https://owow-job-portal.netlify.app'],
+    credentials: true
+  }));
 // Rate limiting
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
@@ -24,11 +28,7 @@ const limiter = rateLimit({
 });
 app.use('/api/', limiter);
 
-// Enable CORS
-app.use(cors({
-  origin: ['http://localhost:5173', 'https://owow-job-portal.netlify.app'],
-  credentials: true
-}));
+
 
 // Body parsing
 app.use(express.json({ limit: '10kb' }));

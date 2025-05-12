@@ -237,3 +237,13 @@
 {"level":"info","message":"GET /api/matches/candidate/6820fe910088b6c9b2254e3d","timestamp":"2025-05-12T05:05:04.498Z"}
 {"level":"info","message":"GET /api/matches/candidate/6820fe910088b6c9b2254e3d","timestamp":"2025-05-12T05:06:14.185Z"}
 {"level":"info","message":"GET /api/matches/job/6821022a6a3836c55ff65236","timestamp":"2025-05-12T05:06:24.167Z"}
+{"level":"info","message":"SIGTERM received. Shutting down gracefully...","timestamp":"2025-05-12T05:12:30.669Z"}
+{"level":"info","message":"Process terminated","timestamp":"2025-05-12T05:12:30.670Z"}
+{"level":"info","message":"MongoDB connection closed","timestamp":"2025-05-12T05:12:30.675Z"}
+{"level":"info","message":"MongoDB connected","timestamp":"2025-05-12T05:12:33.016Z"}
+{"level":"info","message":"Server running at http://localhost:8080","timestamp":"2025-05-12T05:12:33.026Z"}
+{"level":"info","message":"SIGTERM received. Shutting down gracefully...","timestamp":"2025-05-12T05:14:02.294Z"}
+{"level":"info","message":"Process terminated","timestamp":"2025-05-12T05:14:02.296Z"}
+{"level":"info","message":"MongoDB connection closed","timestamp":"2025-05-12T05:14:02.304Z"}
+{"level":"info","message":"MongoDB connected","timestamp":"2025-05-12T05:14:04.180Z"}
+{"level":"info","message":"Server running at http://localhost:8080","timestamp":"2025-05-12T05:14:04.187Z"}
